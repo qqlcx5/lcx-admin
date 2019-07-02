@@ -22,26 +22,19 @@ export default {
 
 <style lang="scss">
 ::-webkit-scrollbar {
+  /*滚动条整体样式*/
   width: 6px;
-  height: 6px;
-  background-color: transparent;
-  // background-color: #f1f1f1;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
 }
-/*定义滚动条的轨道，内阴影及圆角*/
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 0 #f1f1f1;
-  border-radius: 0;
-  visibility: hidden;
-  background-color: #f1f1f1;
-}
-
-/*定义滑块，内阴影及圆角*/
 ::-webkit-scrollbar-thumb {
-  /*width: 10px;*/
-  /*height: 25px;*/
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 0 0 #c1c1c1;
-  background-color: rgba(193, 193, 193, 0.7);
+  /*滚动条里面小方块*/
+  border-radius: 6px;
+  background: #c1c1c1;
+}
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  visibility: hidden;
 }
 #app {
   display: flex;
