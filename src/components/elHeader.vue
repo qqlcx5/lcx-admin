@@ -18,6 +18,7 @@ export default {
   line-height: 60px;
   width: 100%;
   display: flex;
+  flex-shrink: 0;
   background: $color-this;
 }
 </style>

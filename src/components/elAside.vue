@@ -1,9 +1,9 @@
 <template>
   <section class="elAside">
-    <div class="isCollapse" @click="isCollapse = !isCollapse"></div>
+    <!-- <div class="isCollapse" @click="isCollapse = !isCollapse"></div> -->
     <el-menu
-      default-active="1-4-1"
-      class="el-menu-vertical-demo"
+      default-active="1"
+      class="elAside-menu"
       @open="handleOpen"
       @close="handleClose"
       :collapse="isCollapse"
@@ -26,26 +26,42 @@
           <el-menu-item index="1-4-1">选项1</el-menu-item>
         </el-submenu>
       </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item>
-      <el-menu-item index="5">
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="6">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item>
+      <el-submenu index="2">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span slot="title">导航一</span>
+        </template>
+        <el-menu-item-group>
+          <span slot="title">分组一</span>
+          <el-menu-item index="2-1">选项1</el-menu-item>
+          <el-menu-item index="2-2">选项2</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group title="分组2">
+          <el-menu-item index="2-3">选项3</el-menu-item>
+        </el-menu-item-group>
+        <el-submenu index="2-4">
+          <span slot="title">选项4</span>
+          <el-menu-item index="2-4-1">选项1</el-menu-item>
+        </el-submenu>
+      </el-submenu>
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span slot="title">导航一</span>
+        </template>
+        <el-menu-item-group>
+          <span slot="title">分组一</span>
+          <el-menu-item index="3-1">选项1</el-menu-item>
+          <el-menu-item index="3-2">选项2</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group title="分组2">
+          <el-menu-item index="3-3">选项3</el-menu-item>
+        </el-menu-item-group>
+        <el-submenu index="3-4">
+          <span slot="title">选项4</span>
+          <el-menu-item index="3-4-1">选项1</el-menu-item>
+        </el-submenu>
+      </el-submenu>
     </el-menu>
   </section>
 </template>
@@ -55,7 +71,7 @@ export default {
   name: "elAside",
   data() {
     return {
-      isCollapse: true
+      isCollapse: false
     };
   },
   methods: {
@@ -72,18 +88,24 @@ export default {
 .elAside {
   max-width: 200px;
   display: flex;
-  height: 100%;
-  background-color: #000;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: #dddddd;
   position: relative;
-  .isCollapse {
-    z-index: 1;
-    position: absolute;
-    right: -25px;
-    top: 10px;
-    width: 50px;
-    height: 50px;
-    display: block;
-    background-color: #333;
+  .elAside-menu {
+    width: 100%;
+    background-color: #eee;
+    border-right: none;
   }
+  // .isCollapse {
+  //   z-index: 1;
+  //   position: absolute;
+  //   right: -25px;
+  //   top: 10px;
+  //   width: 50px;
+  //   height: 50px;
+  //   display: block;
+  //   background-color: #333;
+  // }
 }
 </style>
