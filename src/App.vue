@@ -1,23 +1,26 @@
 <template>
   <div id="app">
-    <elHeader></elHeader>
+    <router-view />
+    <!-- <elHeader></elHeader>
     <section class="main scrollbar">
       <elAside></elAside>
       <article class="contain">
-        <router-view />
+        
       </article>
-    </section>
+    </section> -->
   </div>
 </template>
+//
 <script>
-import elHeader from "./components/elHeader";
-import elAside from "./components/elAside";
-export default {
-  components: {
-    elHeader,
-    elAside
-  }
-};
+// import elHeader from "./components/elHeader";
+// import elAside from "./components/elAside";
+// export default {
+//   components: {
+//     elHeader,
+//     elAside
+//   }
+// };
+//
 </script>
 
 <style lang="scss">
