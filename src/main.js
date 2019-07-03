@@ -6,12 +6,27 @@ import store from "./store";
 // import "element-ui/lib/theme-chalk/index.css";
 // Vue.use(ElementUI);
 // 按需引入
-import { Menu, Submenu, MenuItem, MenuItemGroup } from "element-ui";
+import {
+  Menu,
+  Submenu,
+  MenuItem,
+  MenuItemGroup,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer
+} from "element-ui";
 
 Vue.use(Menu);
 Vue.use(Submenu);
 Vue.use(MenuItem);
 Vue.use(MenuItemGroup);
+Vue.use(Container);
+Vue.use(Header);
+Vue.use(Aside);
+Vue.use(Main);
+Vue.use(Footer);
 
 Vue.config.productionTip = false;
 
