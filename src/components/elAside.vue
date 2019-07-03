@@ -2,7 +2,10 @@
   <section class="elAside">
     <!-- <div class="isCollapse" @click="isCollapse = !isCollapse"></div> -->
     <el-menu
-      default-active="1"
+      default-active="1-4-1"
+      background-color="#ddd"
+      text-color="#ff11ff"
+      active-text-color="#fff"
       class="elAside-menu"
       @open="handleOpen"
       @close="handleClose"
@@ -90,7 +93,7 @@ export default {
   display: flex;
   box-sizing: border-box;
   overflow-y: auto;
-  background-color: #dddddd;
+  // background-color: #dddddd;
   position: relative;
   .elAside-menu {
     width: 100%;
