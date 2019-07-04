@@ -51,13 +51,19 @@ export default {
     flex-direction: column;
     width: 100%;
     overflow-y: auto;
+    main {
+      padding: 15px;
+      box-sizing: border-box;
+      // border: 15px solid $color-bgc;
+    }
     header,
     footer {
       display: flex;
       align-items: center;
       height: 80px;
       width: 100%;
-      background: $color-bgc;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+      // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
       .collapseIcon {
         width: 60px;
         height: 60px;
