@@ -1,0 +1,33 @@
+$color-blue: #3B88E2; //主色
+$color-blueOne: #4194FF; //深色标题
+$color-blueTwo: #6CC1FF; //浅色标题
+$color-side: #1C2B36; //左侧导航⾊
+$color-sideText: #7BA0BB; //左侧导航未选中⽂字⾊
+$color-btn: #64C15C; //按钮辅助⾊
+$color-tbtn: #1989FA; //⽂字按钮，使⽤范围：显示更多、清空条件
+$color-warn: #FA3030; //提醒⽂字，使⽤范围特殊提示⽂字，如：字数限定等
+$color-333: #333; //标题⽂字，使⽤范围：模块标题，正⽂
+$color-666: #666; //正⽂、次级⽂字
+$color-999: #999; //次标题⽂字，弱⽂字
+$color-active: #F5F6F8; //列表选中交互⾊
+$color-bgc: #F2F4F8; //界⾯整体背景⾊
+$color-fff: #FFFFFF; //模块背景⾊
+$color-border: #C0C4CC; //表格等边框⾊
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 6px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 6px;
+  background: #c1c1c1;
+}
+
+::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  visibility: hidden;
+}

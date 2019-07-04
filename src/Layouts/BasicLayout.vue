@@ -1,38 +1,30 @@
 <template>
-  <div>
-    <el-container>
-      <!-- <el-aside width="200">
-        <el-menu class="el-menu-demo" :collapse="isCollapse"> </el-menu>
-      </el-aside> -->
-      <SiderMenu :isCollapse="isCollapse"></SiderMenu>
-      <el-container>
-        <el-header>
-          <div @click="handleCollapse" class="collapseIcon">
-            <i class="el-icon-s-fold"></i>
-          </div>
-          <Header></Header>
-        </el-header>
-        <el-main>
-          <router-view></router-view>
-        </el-main>
-        <el-footer>
-          <Footer></Footer>
-        </el-footer>
-      </el-container>
-    </el-container>
+  <div class="BasicLayout">
+    <SiderMenu :isCollapse="isCollapse"></SiderMenu>
+    <div class="contain">
+      <header>
+        <div @click="handleCollapse" class="collapseIcon">
+          <i :class="isCollapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'"></i>
+        </div>
+      </header>
+
+      <main>
+        <router-view></router-view>
+      </main>
+      <footer>
+        <p>Lcx-admin ©2019.7.1 Created by Lcx</p>
+      </footer>
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "./Header";
-import Footer from "./Footer";
+// import Foot from "./Footer";
 import SiderMenu from "./SiderMenu";
 // import SettingDrawer from "../components/SettingDrawer";
 export default {
   name: "BasicLayout",
   components: {
-    Header,
-    Footer,
     SiderMenu
   },
   data() {
@@ -49,19 +41,35 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.el-container {
-  min-height: 100vh;
-}
-.collapseIcon {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  font-size: 20px;
-}
-.el-header {
+@import "../assets/css/theme.scss";
+.BasicLayout {
+  // min-height: 100vh;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .contain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+    header,
+    footer {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      width: 100%;
+      background: $color-bgc;
+      .collapseIcon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 24px;
+        color: $color-side;
+        &:hover {
+          background: $color-active;
+        }
+      }
+    }
+  }
 }
 </style>
