@@ -56,6 +56,7 @@ export default {
       box-sizing: border-box;
       // border: 15px solid $color-bgc;
     }
+
     header,
     footer {
       display: flex;
@@ -75,6 +76,9 @@ export default {
           background: $color-active;
         }
       }
+    }
+    footer {
+      justify-content: center;
     }
   }
 }
